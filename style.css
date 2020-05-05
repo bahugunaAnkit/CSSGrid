@@ -1,0 +1,117 @@
+*{
+	margin : 0;
+	padding : 0;
+	box-sizing:border-box;
+	font-family: arial, helvetica, sans-serif;
+	color: var(--dark);
+}
+
+/*CSS variables*/
+:root{
+	--primary : #ddd;
+	--dark : #333;
+	--light : #fff;
+	--shadow : 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+body{
+	margin: 30px 50px;
+	background-color: #ccc;
+	line-height: 1.4;
+}
+
+.btn{
+	background-color: var(--dark);
+	color: var(--light);
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+}
+
+img{
+	max-width: 100%;
+}
+
+.wrapper{
+	display: grid;
+	grid-gap: 20px;
+}
+
+/*Navigation*/
+.main-nav ul{
+	display: grid;
+	grid-gap: 20px;
+	padding: 0;
+	list-style: none;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.main-nav a{
+	background-color: var(--primary);
+	text-decoration: none;
+	text-align: center;
+	padding: 0.8rem;
+	color: var(--dark);
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	display: block;
+	box-shadow: var(--shadow);
+}
+
+.main-nav a:hover{
+	background-color: var(--dark);
+	color: var(--light);
+}
+
+/*Top Container*/
+.top-container{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+	'showcase showcase top-box-a'
+	'showcase showcase top-box-b';
+}
+
+.showcase{
+	grid-area: showcase;
+	background-image: linear-gradient(90deg, rgba(0,0,0,1), rgba(0,0,0,0)), url('./img/Photo by Maurício Mascaro from Pexels.jpg');
+	min-height: 400px;
+	background-size: cover;
+	background-position: right top 80%;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	box-shadow: var(--shadow);
+}
+.showcase h1{
+	color: rgba(210,210,210, 1);
+	font-size: 3.5rem;
+	margin: 1rem 0;
+}
+.showcase p{
+	color: rgba(210,210,210,1);
+	font-size: 1.3rem;
+	margin-bottom: 2rem;
+}
+/*top-box*/
+
+.top-box{
+	background-color: var(--primary);
+	display: grid;
+	//grid-gap: 20px;
+	align-items: center;
+	justify-items: center;
+	padding: 1.5rem;
+}
+
+.top-box .price{
+	font-size: 2rem;
+}
+.top-box-a{
+	grid-area: top-box-a;
+}
+.top-box-b{
+	grid-area: top-box-b;
+}
